@@ -1,3 +1,8 @@
+const clearCharacter = () =>
+{
+	document.querySelector('[data-key="' + sequenceNumber[sequenceNumber.length - 1] + '"]').classList.remove('game__char--active'); //Usuwa podświetlenie prostokąta postaci, której numer jest ostatni w tablicy numerów.
+}
+
 const showCharacter = () =>
 {
     document.querySelector('[data-key="' + sequenceNumber[sequenceNumber.length - 1] + '"]').classList.add('game__char--active'); //Podświetla prostokąt postaci, której numer jest ostatni w tablicy numerów.
@@ -6,7 +11,6 @@ const showCharacter = () =>
 	const sound = new Audio(soundUrl);
 	sound.play(); //Odtwarza dźwięk, którego nazwa jest ostatnia w tablicy dźwięków.
 	
-	
-	
-	//Usuń podświetlenie postaci za 1000ms.
+	setTimeout(clearCharacter, 1000);
 }
+
