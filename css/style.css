@@ -34,6 +34,10 @@ body {
   cursor: pointer;
 }
 
+.game__char--active {
+  background-color: red;
+}
+
 .game__char:hover {
   background-color: #85a4ff;
 }
