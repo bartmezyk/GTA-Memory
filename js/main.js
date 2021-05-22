@@ -23,6 +23,8 @@ const newCharacter = () =>
 
 const startGame = () =>
 {
+	document.querySelector('.startGame').disabled = true;
+
 	gameOn = true;
 
     rememberNewCharacter();

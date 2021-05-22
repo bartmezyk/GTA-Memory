@@ -1,6 +1,11 @@
 const clearCharacter = () =>
 {
-	document.querySelector('[data-key="' + sequenceNumber[sequenceNumber.length - 1] + '"]').classList.remove('game__char--active'); //Usuwa podświetlenie prostokąta postaci, której numer jest ostatni w tablicy numerów.
+	//document.querySelector('[data-key="' + sequenceNumber[sequenceNumber.length - 1] + '"]').classList.remove('game__char--active'); //Usuwa podświetlenie prostokąta postaci, której numer jest ostatni w tablicy numerów.
+
+	document.querySelectorAll('.game__char').forEach(char =>
+	{
+		char.classList.remove('game__char--active'); //Usuwa podświetlenie prostokątów wszystkich postaci.
+	})
 }
 
 const showCharacter = number =>

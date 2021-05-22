@@ -4,7 +4,7 @@ const properChar = () =>
 	
 	setTimeout('showCharacter(' + (clickCounter - 1) + ')', 1000);
 	
-	// Funkcja game over wywołana za 1000ms.
+	setTimeout(gameOver, 2000);
 }
 
 const checkClick = number =>
