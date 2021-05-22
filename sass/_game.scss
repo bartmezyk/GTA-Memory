@@ -1,0 +1,13 @@
+.game
+{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+
+    &__char
+    {
+        flex-basis: 20%;
+        height: 50vh;
+        background-color: royalblue;
+    }
+}
