@@ -7,7 +7,7 @@ const properChar = () =>
 	setTimeout(gameOver, 2000);
 }
 
-const checkClick = number =>
+const checkClick = (number) =>
 {
 	if(!gameOn) //Jeśli nie nastąpił start gry
 	{
