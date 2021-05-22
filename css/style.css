@@ -16,6 +16,10 @@ body {
   font-weight: 700;
 }
 
+.gameInfo {
+  text-transform: uppercase;
+}
+
 .game {
   display: -webkit-box;
   display: -ms-flexbox;
