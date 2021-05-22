@@ -9,5 +9,11 @@
         flex-basis: 20%;
         height: 50vh;
         background-color: royalblue;
+        cursor: pointer;
+
+        &:hover
+        {
+            background-color: rgb(133, 164, 255);
+        }
     }
 }

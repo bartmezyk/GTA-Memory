@@ -8,6 +8,14 @@ body {
   color: #fff;
 }
 
+.startGame {
+  margin: 20px;
+  text-transform: uppercase;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
 .game {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,5 +31,10 @@ body {
       flex-basis: 20%;
   height: 50vh;
   background-color: royalblue;
+  cursor: pointer;
+}
+
+.game__char:hover {
+  background-color: #85a4ff;
 }
 /*# sourceMappingURL=style.css.map */
