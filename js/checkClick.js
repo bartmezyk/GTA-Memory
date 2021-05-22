@@ -1,3 +1,12 @@
+const properChar = () =>
+{
+    gameInfo.textContent = 'you should have clicked:';
+	
+	setTimeout('showCharacter(' + (clickCounter - 1) + ')', 1000);
+	
+	// Funkcja game over wywołana za 1000ms.
+}
+
 const checkClick = number =>
 {
 	if(!gameOn) //Jeśli nie nastąpił start gry
@@ -21,6 +30,7 @@ const checkClick = number =>
 			
 			//Zablokuj prostokąty.
 			
+            setTimeout(properChar, 1500);
 			//Wskaż jaki prostokąt powinien zostać kliknięty za 1500ms (bo tyle cj wypowiada kwestię 'Ah shit here we go again.')
 		}
 		else
