@@ -23,6 +23,8 @@ const newCharacter = () =>
 
 const startGame = () =>
 {
+	gameOn = true;
+
     rememberNewCharacter();
 
     newCharacter();
