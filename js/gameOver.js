@@ -1,3 +1,4 @@
+//Wykonaj czynności po przegranej rozgrywce.
 const gameOver = () =>
 {
     //Przywrócenie wartości startowych.
@@ -8,6 +9,6 @@ const gameOver = () =>
 	
 	gameText('again?');
 	
-	activate(true);
-	document.querySelector('.startGame').disabled = false;
+	activate(true); //Dodaj możliwość kliknięcia w postacie.
+	document.querySelector('.startGame').disabled = false; //Odblokowanie przycisku rozpoczynającego ponowną rozgrywkę.
 }

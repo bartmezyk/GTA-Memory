@@ -1,6 +1,4 @@
-const gameText = (text, activateClick = false) =>
+const gameText = text =>
 {
 	gameInfo.textContent = text;
-
-    if(activateClick) activate(true);
 }

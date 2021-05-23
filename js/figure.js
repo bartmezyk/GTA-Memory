@@ -49,5 +49,6 @@ const newFigure = () =>
 	
 	setTimeout('gameText("Remember new character")',1000);
 	setTimeout(showFigure, 1000);
-	setTimeout('gameText("Repeat the sequence", true)', 2000);
+	setTimeout('gameText("Repeat the sequence")', 2000);
+	setTimeout('activate("true")', 2000);
 }
