@@ -6,7 +6,8 @@ const gameOver = () =>
 	sequenceNumber.length = 0;
 	sequenceSound.length = 0;
 	
-	gameInfo.textContent = 'again?';
+	gameText('again?');
+	
 	activate(true);
 	document.querySelector('.startGame').disabled = false;
 }

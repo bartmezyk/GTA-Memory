@@ -1,35 +1,12 @@
-const rememberNewCharacter = () =>
-{
-	gameInfo.textContent = 'remember new character:';
-}
-
-const repeatTheSequence = () =>
-{
-	gameInfo.textContent = 'repeat the sequence';
-	
-	activate(true);
-}
-
-const newCharacter = () =>
-{
-	activate(false);
-	
-	drawing();
-	
-	setTimeout(rememberNewCharacter,1000);
-	setTimeout(showFigure, 1000);
-	setTimeout(repeatTheSequence, 2000);
-}
-
 const startGame = () =>
 {
 	document.querySelector('.startGame').disabled = true;
 
 	gameOn = true;
 
-    rememberNewCharacter();
+	gameText("Remember new character");
 
-    newCharacter();
+    newFigure();
 }
 
 document.querySelector('.startGame').addEventListener('click', startGame);

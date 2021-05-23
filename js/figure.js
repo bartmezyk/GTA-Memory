@@ -34,9 +34,20 @@ const showFigure = index =>
 //Pokaż, która postać powinna zostać kliknięta.
 const showProperFigure = () =>
 {
-    gameInfo.textContent = 'you should have clicked:';
+	gameText('you should have clicked:');
 	
 	setTimeout('showFigure(' + (clickCounter - 1) + ')', 1000); //Podświetl właściwą postać.
 	
 	setTimeout(gameOver, 2500);
+}
+
+const newFigure = () =>
+{
+	activate(false);
+	
+	drawing();
+	
+	setTimeout('gameText("Remember new character")',1000);
+	setTimeout(showFigure, 1000);
+	setTimeout('gameText("Repeat the sequence", true)', 2000);
 }

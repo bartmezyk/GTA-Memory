@@ -32,9 +32,9 @@ const checkClick = e =>
 			
 			if(clickCounter >= sequenceNumber.length) //Gdy zostanie kliknięta ostatnia postać w sekwencji (czyli gdy uda się powtórzyć całą sekwencję).
 			{
-				gameInfo.textContent = 'great!';
+				gameText('great!');
 				
-				newCharacter();
+				newFigure();
 				
 				clickCounter = 0; //Wyzeruj ilość poprawnych kliknięć z rzędu na postacie w pojedynczej sekwencji (bo udało się powtórzyć całą sekwencję).
 			}
