@@ -1,5 +1,5 @@
 //Dodaj możliwość kliknięcia w postacie (gdy 'click' = true) lub zablokuj taką możliwość (gdy 'click' = false).
-const activate = click =>
+const activate = (click = true) =>
 {
     figures.forEach(figure =>
     {
