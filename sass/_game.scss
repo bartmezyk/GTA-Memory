@@ -1,22 +1,56 @@
 .game
 {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 10vh;
+	background-image: url("../img/openingBackground.jpg");
+	background-repeat: no-repeat;
+	width: 1024px;
+	height: 600px;
+	margin: 0 auto;
+	cursor: pointer;
+
+    &__activeFigure
+    {   
+        width: 1340px;
+        height: 600px;
+        z-index: 100;
+        position: relative;
+    }
 
     &__figure
     {
-        flex-basis: 20%;
-        height: 50vh;
-        background-color: royalblue;
-        cursor: pointer;
-        &--active
+        position: relative;
+        float: left;
+        opacity: 0.5;
+        &:nth-child(1)
         {
+            width: 118px;
+            height: 320px;
+            left: 167px;
+            top: 150px;
+            background-color: yellow;
+        }
+        &:nth-child(2)
+        {
+            width: 85px;
+            height: 240px;
+            left: 250px;
+            top: 98px;
+            background-color: blue;
+        }
+        &:nth-child(3)
+        {
+            width: 83px;
+            height: 265px;
+            left: 350px;
+            top: 173px;
             background-color: red;
         }
-        &:hover
+        &:nth-child(4)
         {
-            background-color: rgb(133, 164, 255);
+            width: 115px;
+            height: 280px;
+            left: 530px;
+            top: 170px;
+            background-color: green;
         }
     }
 }

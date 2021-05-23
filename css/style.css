@@ -86,28 +86,56 @@ body {
 }
 
 .game {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-top: 10vh;
-}
-
-.game__figure {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  height: 50vh;
-  background-color: royalblue;
+  background-image: url("../img/openingBackground.jpg");
+  background-repeat: no-repeat;
+  width: 1024px;
+  height: 600px;
+  margin: 0 auto;
   cursor: pointer;
 }
 
-.game__figure--active {
+.game__activeFigure {
+  width: 1340px;
+  height: 600px;
+  z-index: 100;
+  position: relative;
+}
+
+.game__figure {
+  position: relative;
+  float: left;
+  opacity: 0.5;
+}
+
+.game__figure:nth-child(1) {
+  width: 118px;
+  height: 320px;
+  left: 167px;
+  top: 150px;
+  background-color: yellow;
+}
+
+.game__figure:nth-child(2) {
+  width: 85px;
+  height: 240px;
+  left: 250px;
+  top: 98px;
+  background-color: blue;
+}
+
+.game__figure:nth-child(3) {
+  width: 83px;
+  height: 265px;
+  left: 350px;
+  top: 173px;
   background-color: red;
 }
 
-.game__figure:hover {
-  background-color: #85a4ff;
+.game__figure:nth-child(4) {
+  width: 115px;
+  height: 280px;
+  left: 530px;
+  top: 170px;
+  background-color: green;
 }
 /*# sourceMappingURL=style.css.map */
