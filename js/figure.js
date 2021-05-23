@@ -31,3 +31,12 @@ const showFigure = index =>
 	setTimeout(clearFigures, 1000); //Usuń podświetlenie za 1s.
 }
 
+//Pokaż, która postać powinna zostać kliknięta.
+const showProperFigure = () =>
+{
+    gameInfo.textContent = 'you should have clicked:';
+	
+	setTimeout('showFigure(' + (clickCounter - 1) + ')', 1000); //Podświetl właściwą postać.
+	
+	setTimeout(gameOver, 2500);
+}

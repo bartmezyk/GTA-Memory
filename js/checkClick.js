@@ -1,12 +1,3 @@
-const properChar = () =>
-{
-    gameInfo.textContent = 'you should have clicked:';
-	
-	setTimeout('showFigure(' + (clickCounter - 1) + ')', 1000);
-	
-	setTimeout(gameOver, 2500);
-}
-
 const checkClick = e =>
 {
 	if(!gameOn) //Jeśli nie nastąpił start gry
@@ -31,7 +22,7 @@ const checkClick = e =>
 			
 			activate(false);
 			
-            setTimeout(properChar, 1500);
+            setTimeout(showProperFigure, 1500);
 		}
 		else
 		{
