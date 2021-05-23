@@ -12,3 +12,8 @@ const gameOver = () =>
 	activate(true); //Dodaj możliwość kliknięcia w postacie.
 	document.querySelector('.startGame').disabled = false; //Odblokowanie przycisku rozpoczynającego ponowną rozgrywkę.
 }
+
+const gameText = text =>
+{
+	gameInfo.textContent = text;
+}
