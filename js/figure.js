@@ -10,23 +10,20 @@ const clearFigures = () =>
 //Podświetl postać i odtwórz jej dźwięk.
 const showFigure = index =>
 {
-	let soundUrl;
-
 	if(index == undefined) //Jeśli nie podesłano żadnego argumentu.
 	{ 
 		document.querySelector('[data-key="' + sequenceNumber[sequenceNumber.length - 1] + '"]').classList.add('game__figure--active'); //Podświetl postać, której numer jest ostatni w globalnej tablicy numerów.
 
-		soundUrl = 'sound/dialogue/' + sequenceSound[sequenceSound.length - 1] + '.wav';
+		const soundNo = sequenceSound[sequenceSound.length - 1];
+		sound(soundNo, true); //Odtwórz dźwięk, którego numer jest ostatni w tablicy dźwięków.
 	}
 	else //Gdy podesłano argument. Potrzebne by podświetlać postać, która powinna zostać kliknięta, gdy wybrano niepoprawną postać.
 	{
 		document.querySelector('[data-key="' + sequenceNumber[index] + '"]').classList.add('game__figure--active'); //Podświetl postać, której numer znajduje się na 'index' miejscu w globalnej tablicy numerów.
 
-		soundUrl = 'sound/dialogue/' + sequenceSound[index] + '.wav';
+		const soundNo = sequenceSound[index];
+		sound(soundNo, true); //Odtwórz dźwięk, której numer znajduje się na 'index' miejscu w globalnej tablicy dźwięków.
 	}
-
-	const sound = new Audio(soundUrl);
-	sound.play(); //Odtwórz dźwięk, którego numer jest ostatni w tablicy dźwięków.
 	
 	setTimeout(clearFigures, 1000);
 }

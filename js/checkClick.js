@@ -3,11 +3,8 @@ const checkClick = e =>
 {
 	if(!gameOn) //Jeśli nie nastąpił start rozgrywki.
 	{
-		const drawedSound = (Math.floor(Math.random() * 5)).toString();
-		const soundName = e.target.dataset.key + drawedSound;
-		const soundUrl = 'sound/dialogue/' + soundName + '.wav';
-		const sound = new Audio(soundUrl);
-		sound.play(); //Odtwórz losowy dźwięk klikniętej postaci.
+		const soundNo = e.target.dataset.key + (Math.floor(Math.random() * 5)).toString();
+		sound(soundNo, true); //Odtwórz losowy dźwięk klikniętej postaci.
 	}
 	else //Jeśli rozgrywka trwa.
 	{
@@ -17,8 +14,7 @@ const checkClick = e =>
 		{
 			gameInfo.textContent = 'game over';
 			
-			const sound = new Audio('sound/end.wav');
-			sound.play(); //Odtwórz dźwięk oznaczający przegraną.
+			sound('end'); //Odtwórz dźwięk oznaczający przegraną.
 			
 			activate(false);
 			
@@ -26,9 +22,8 @@ const checkClick = e =>
 		}
 		else //Gdy gracz wybierze prawidłową postać zgodnie z sekwencją.
 		{
-			const soundUrl = 'sound/dialogue/' + sequenceSound[clickCounter - 1] + '.wav';
-			const sound = new Audio(soundUrl);
-			sound.play(); //Odtwórz dźwięk klikniętej postaci zgodny z sekwencją.
+			const soundNo = sequenceSound[clickCounter - 1];
+			sound(soundNo, true); //Odtwórz dźwięk klikniętej postaci zgodny z sekwencją.
 			
 			if(clickCounter >= sequenceNumber.length) //Gdy zostanie kliknięta ostatnia postać w sekwencji (czyli gdy uda się powtórzyć całą sekwencję).
 			{

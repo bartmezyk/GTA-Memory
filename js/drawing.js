@@ -21,7 +21,6 @@ const drawing = () =>
 	}
 	sequenceNumber.push(drawedNumber); //Umieszczenie wylosowanego nr postaci w globalnej tablicy liczb będących sekwencją numerów postaci do kliknięcia.
 	
-	const drawedSound = (Math.floor(Math.random() * 5)).toString(); //Losowanie nr dźwięku spośród 5 możliwych.
-	const soundName = drawedNumber+drawedSound; //Połączenie wylosowanego nr dźwięku z wylosowanym nr postaci.
-	sequenceSound.push(soundName); //Umieszczenie połączonego nr w globalnej tablicy dźwięków wydawanych przez postacie.
+	const soundNo = drawedNumber + (Math.floor(Math.random() * 5)).toString(); //Losowanie nr dźwięku spośród 5 możliwych i połączenie go z nr wylosowanej postaci.
+	sequenceSound.push(soundNo); //Umieszczenie połączonego nr w globalnej tablicy dźwięków wydawanych przez postacie.
 }
