@@ -54,7 +54,7 @@ body {
 .topBar__logo {
   font-family: 'Pricedown', sans-serif;
   -webkit-text-stroke: 1px black;
-  width: 70%;
+  width: 100%;
   float: left;
   font-size: 55px;
   margin: 10px 0;
@@ -66,6 +66,14 @@ body {
   font-family: 'Diploma', serif;
   color: black;
   -webkit-text-stroke: 1px white;
+}
+
+.footer {
+  width: 1330px;
+  background-color: #404040;
+  font-size: 15px;
+  font-family: 'Lato', sans-serif;
+  padding: 5px;
 }
 
 .game {
