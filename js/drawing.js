@@ -10,10 +10,8 @@ const drawing = () =>
 
 		for(i = 0; i < 4; i++)
 		{
-			if(i != sequenceNumber[sequenceNumber.length - 1]) ///Tylko numer postaci poprzednio wylosowanej nie znajdzie sie w tymczasowej tablicy numerów postaci do aktualnego losowania.
-			{
-				numbersForDrawing.push(i);
-			}
+			//Tylko numer postaci poprzednio wylosowanej nie znajdzie sie w tymczasowej tablicy numerów postaci do aktualnego losowania.
+			if(i != sequenceNumber[sequenceNumber.length - 1]) numbersForDrawing.push(i);
 		}
 		const drawedArrayIndex = Math.floor(Math.random() * 3); //Losowanie tylko spośród 3 numerów postaci.
 		

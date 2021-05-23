@@ -1,8 +1,5 @@
 //Wyświetl tekst o rozgrywce podesłany jako argument.
-const gameText = text =>
-{
-	gameInfo.textContent = text;
-}
+const gameText = text => gameInfo.textContent = text;
 
 //Rozpocznij rozgrywkę.
 const gameStart = () =>

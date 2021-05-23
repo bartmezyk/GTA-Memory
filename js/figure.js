@@ -1,10 +1,7 @@
 //Usuń podświetlenie wszystkich postaci (czyli również tej, która jest aktualnie podświetlona).
 const clearFigures = () =>
 {
-	figures.forEach(figure =>
-	{
-		figure.classList.remove('game__figure--active');
-	});
+	figures.forEach(figure => figure.classList.remove('game__figure--active'));
 }
 
 //Podświetl postać i odtwórz jej dźwięk.
