@@ -1,5 +1,5 @@
 //Usuń podświetlenie wszystkich postaci (czyli również tej, która jest aktualnie podświetlona).
-const clearCharacter = () =>
+const clearFigures = () =>
 {
 	figures.forEach(figure =>
 	{
@@ -8,7 +8,7 @@ const clearCharacter = () =>
 }
 
 //Podświetl postać i odtwórz jej dźwięk.
-const showCharacter = index =>
+const showFigure = index =>
 {
 	let soundUrl;
 
@@ -28,6 +28,6 @@ const showCharacter = index =>
 	const sound = new Audio(soundUrl);
 	sound.play(); //Odtwarza dźwięk, którego numer jest ostatni w tablicy dźwięków.
 	
-	setTimeout(clearCharacter, 1000); //Usuń podświetlenie za 1s.
+	setTimeout(clearFigures, 1000); //Usuń podświetlenie za 1s.
 }
 

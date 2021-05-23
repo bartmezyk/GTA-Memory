@@ -2,7 +2,7 @@ const properChar = () =>
 {
     gameInfo.textContent = 'you should have clicked:';
 	
-	setTimeout('showCharacter(' + (clickCounter - 1) + ')', 1000);
+	setTimeout('showFigure(' + (clickCounter - 1) + ')', 1000);
 	
 	setTimeout(gameOver, 2500);
 }

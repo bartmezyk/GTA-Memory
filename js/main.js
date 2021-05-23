@@ -17,7 +17,7 @@ const newCharacter = () =>
 	drawing();
 	
 	setTimeout(rememberNewCharacter,1000);
-	setTimeout(showCharacter, 1000);
+	setTimeout(showFigure, 1000);
 	setTimeout(repeatTheSequence, 2000);
 }
 
