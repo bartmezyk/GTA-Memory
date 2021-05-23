@@ -4,24 +4,7 @@
     padding: 0;
 }
 
-body
-{
-    background-color: #303030;
-    color: #fff;
-}
-
-.startGame
-{
-    margin: 20px;
-    text-transform: uppercase;
-    padding: 5px;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-.gameInfo
-{
-    text-transform: uppercase;
-}
-
+@import 'body';
+@import 'container';
+@import 'topBar';
 @import 'game';
