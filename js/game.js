@@ -1,3 +1,19 @@
+const gameText = text =>
+{
+	gameInfo.textContent = text;
+}
+
+const gameStart = () =>
+{
+	startGameBtn.disabled = true;
+
+	gameOn = true;
+
+	gameText("Remember new character");
+
+    newFigure();
+}
+
 //Wykonaj czynności po przegranej rozgrywce.
 const gameOver = () =>
 {
@@ -13,7 +29,5 @@ const gameOver = () =>
 	document.querySelector('.startGame').disabled = false; //Odblokowanie przycisku rozpoczynającego ponowną rozgrywkę.
 }
 
-const gameText = text =>
-{
-	gameInfo.textContent = text;
-}
+startGameBtn.addEventListener('click', gameStart);
+activate(true);
