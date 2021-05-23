@@ -1,4 +1,4 @@
-//Dodaj możliwość kliknięcia w prostokąty prostokąty (gdy 'click' = true) lub zablokuj taką możliwość (gdy 'click' = false).
+//Dodaj możliwość kliknięcia w postacie (gdy 'click' = true) lub zablokuj taką możliwość (gdy 'click' = false).
 const activate = click =>
 {
     figures.forEach(figure =>

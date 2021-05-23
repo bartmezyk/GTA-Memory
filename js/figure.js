@@ -12,7 +12,7 @@ const showFigure = index =>
 {
 	let soundUrl;
 
-	if(index == undefined) //Jesli nie podesłano żadnego argumentu.
+	if(index == undefined) //Jeśli nie podesłano żadnego argumentu.
 	{ 
 		document.querySelector('[data-key="' + sequenceNumber[sequenceNumber.length - 1] + '"]').classList.add('game__figure--active'); //Podświetl postać, której numer jest ostatni w globalnej tablicy numerów.
 

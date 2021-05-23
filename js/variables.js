@@ -1,7 +1,7 @@
-const sequenceNumber = []; //Tablica liczb będących sekwencją numerów postaci do kliknięcia.
-const sequenceSound = []; //Tablica liczb będących nazwami dźwięków wydawanych sekwencyjnie przez postacie.
+const sequenceNumber = []; //Globalna tablica liczb będących sekwencją numerów postaci do kliknięcia.
+const sequenceSound = []; //Globalna tablica liczb będących numerami dźwięków wydawanych przez postacie.
 
-let gameOn = false; //Po rozpoczęciu rozgrywki (kliknięte START GAME) zmienia się na true
+let gameOn = false; //Po rozpoczęciu rozgrywki (kliknięcie START GAME) zmienia się na true.
 
 let clickCounter = 0; //Ilość poprawnych kliknięć z rzędu na postacie w pojedynczej sekwencji.
 
