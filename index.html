@@ -8,14 +8,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <button class="startGame">Start game</button>
-    <span class="gameInfo">...</span>
+    <div class="container">
+        <div class="topBar">
+            <div class="logo">
+                grand<br>theft<br>auto<br><span class="logo__memory">Memory</span>
+            </div>
+        </div>
 
-    <div class="game">
-        <div data-key="0" class="game__figure"></div>
-        <div data-key="1" class="game__figure"></div>
-        <div data-key="2" class="game__figure"></div>
-        <div data-key="3" class="game__figure"></div>
+        <div class="gameMenu"></div>
+        <div class="game">
+            <div class="game__activeFigure">
+                <div data-key="0" class="game__figure"></div>
+                <div data-key="1" class="game__figure"></div>
+                <div data-key="2" class="game__figure"></div>
+                <div data-key="3" class="game__figure"></div>
+            </div>
+        </div>
+        <div class="footer">Bartosz Mężyk 2021 &copy; Wszelkie prawa zastrzeżone.</div>
+        
+        <button class="startGame">Start game</button>
+        <span class="gameInfo">...</span>
     </div>
 
     <script src="js/variables.js"></script>
