@@ -26,9 +26,9 @@ const showFigure = index =>
 	}
 
 	const sound = new Audio(soundUrl);
-	sound.play(); //Odtwarza dźwięk, którego numer jest ostatni w tablicy dźwięków.
+	sound.play(); //Odtwórz dźwięk, którego numer jest ostatni w tablicy dźwięków.
 	
-	setTimeout(clearFigures, 1000); //Usuń podświetlenie za 1s.
+	setTimeout(clearFigures, 1000);
 }
 
 //Pokaż, która postać powinna zostać kliknięta.
@@ -41,6 +41,7 @@ const showProperFigure = () =>
 	setTimeout(gameOver, 2500);
 }
 
+//Losuj nową postać do sekwencji i wyświetl stosowne informacje o rozgrywce.
 const newFigure = () =>
 {
 	activate(false);

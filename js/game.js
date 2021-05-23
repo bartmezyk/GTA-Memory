@@ -1,15 +1,17 @@
+//Wyświetl tekst o rozgrywce podesłany jako argument.
 const gameText = text =>
 {
 	gameInfo.textContent = text;
 }
 
+//Rozpocznij rozgrywkę.
 const gameStart = () =>
 {
-	startGameBtn.disabled = true;
+	startGameBtn.disabled = true; //Dezaktywuj przycisk rozpoczynający rozgrywkę.
 
 	gameOn = true;
 
-	gameText("Remember new character");
+	gameText("Remember new character"); //Wyświetl tekst o rozgrywce.
 
     newFigure();
 }
@@ -26,7 +28,7 @@ const gameOver = () =>
 	gameText('again?');
 	
 	activate(); //Dodaj możliwość kliknięcia w postacie.
-	document.querySelector('.startGame').disabled = false; //Odblokowanie przycisku rozpoczynającego ponowną rozgrywkę.
+	startGameBtn.disabled = false; //Odblokowanie przycisku rozpoczynającego ponowną rozgrywkę.
 }
 
 startGameBtn.addEventListener('click', gameStart);

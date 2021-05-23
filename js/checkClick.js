@@ -20,9 +20,9 @@ const checkClick = e =>
 			const sound = new Audio('sound/end.wav');
 			sound.play(); //Odtwórz dźwięk oznaczający przegraną.
 			
-			activate(false); //Zablokuj możliwość kliknięcia w postacie.
+			activate(false);
 			
-            setTimeout(showProperFigure, 1500); //Pokaż, która postać powinna zostać kliknięta za 1.5s.
+            setTimeout(showProperFigure, 1500);
 		}
 		else //Gdy gracz wybierze prawidłową postać zgodnie z sekwencją.
 		{
