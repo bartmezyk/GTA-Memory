@@ -1,0 +1,41 @@
+@font-face /* logo (grand theft auto) */
+{
+    font-family: 'Pricedown';
+    src: url('font/Pricedown.eot');
+    src: url('font/Pricedown.eot?#iefix') format('embedded-opentype'),
+        url('font/Pricedown.woff2') format('woff2'),
+        url('font/Pricedown.woff') format('woff'),
+        url('font/Pricedown.ttf') format('truetype'),
+        url('font/Pricedown.svg#Pricedown') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face /* logo (Memory) */
+{
+    font-family: 'Diploma';
+    src: url('font/Diploma.eot');
+    src: url('font/Diploma.eot?#iefix') format('embedded-opentype'),
+        url('font/Diploma.woff2') format('woff2'),
+        url('font/Diploma.woff') format('woff'),
+        url('font/Diploma.ttf') format('truetype'),
+        url('font/Diploma.svg#Diploma') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face /* reszta witryny (oprócz stopki, bo tam potrzebne polskie litery) */
+{
+    font-family: 'BankGothic';
+    src: url('font/BankGothic.eot');
+    src: url('font/BankGothic.eot?#iefix') format('embedded-opentype'),
+        url('font/BankGothic.woff2') format('woff2'),
+        url('font/BankGothic.woff') format('woff'),
+        url('font/BankGothic.ttf') format('truetype'),
+        url('font/BankGothic.svg#BankGothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
