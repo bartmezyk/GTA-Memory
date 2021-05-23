@@ -4,13 +4,18 @@ const properChar = () =>
 	
 	setTimeout('showCharacter(' + (clickCounter - 1) + ')', 1000);
 	
-	setTimeout(gameOver, 2000);
+	setTimeout(gameOver, 2500);
 }
 
-const checkClick = (number) =>
+const checkClick = e =>
 {
+	console.log('CHECK CLICK');
+	
+	const number = e.target.dataset.key;
+
 	if(!gameOn) //Jeśli nie nastąpił start gry
 	{
+		console.log('OUT GAME');
 		const drawedSound = (Math.floor(Math.random() * 5)).toString();
 		const soundName = number + drawedSound;
 		const soundUrl = 'sound/dialogue/' + soundName + '.wav';
@@ -23,24 +28,26 @@ const checkClick = (number) =>
 		
 		if(number != sequenceNumber[clickCounter - 1])
 		{
+			console.log('IF');
 			gameInfo.textContent = 'game over';
 			
 			const sound = new Audio('sound/end.wav');
 			sound.play();
 			
-			//Zablokuj prostokąty.
+			deactivateChar();
 			
             setTimeout(properChar, 1500);
-			//Wskaż jaki prostokąt powinien zostać kliknięty za 1500ms (bo tyle cj wypowiada kwestię 'Ah shit here we go again.')
 		}
 		else
 		{
+			console.log('ELSE');
 			const soundUrl = 'sound/dialogue/' + sequenceSound[clickCounter - 1] + '.wav';
 			const sound = new Audio(soundUrl);
 			sound.play();
-		
+			
 			if(clickCounter >= sequenceNumber.length)
 			{
+				console.log('LAST CHARACTER');
 				gameInfo.textContent = 'great!';
 				
 				newCharacter();
@@ -50,11 +57,3 @@ const checkClick = (number) =>
 		}
 	}
 }
-
-document.querySelectorAll('.game__char').forEach((char, index) =>
-{
-    char.addEventListener('click', ()=>
-    {
-        checkClick(index);
-    })
-})

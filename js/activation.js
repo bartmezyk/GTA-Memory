@@ -1,18 +1,15 @@
-const activteChar = () =>
+const activateChar = () =>
 {
-    document.querySelectorAll('.game__char').forEach((char, index) =>
+    document.querySelectorAll('.game__char').forEach(() =>
     {
-        char.addEventListener('click', () =>
-        {
-            checkClick(index);
-        })
-    })
+        char.addEventListener('click', checkClick);
+    });
 }
 
-const deactivteChar = () =>
+const deactivateChar = () =>
 {
-    document.querySelectorAll('.game__char').forEach((char, index) =>
+    document.querySelectorAll('.game__char').forEach(() =>
     {
-        char.removeEventListener('click');
-    })
+        char.removeEventListener('click', checkClick);
+    });
 }

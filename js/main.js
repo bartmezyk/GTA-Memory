@@ -7,12 +7,12 @@ const repeatTheSequence = () =>
 {
 	gameInfo.textContent = 'repeat the sequence';
 	
-	//Odblokuj prostokąty.
+	activateChar();
 }
 
 const newCharacter = () =>
 {
-	//Zablokuj prostokąty.
+	deactivateChar();
 	
 	drawing();
 	
@@ -34,3 +34,4 @@ const startGame = () =>
 
 document.querySelector('.startGame').addEventListener('click', startGame);
 
+activateChar();
