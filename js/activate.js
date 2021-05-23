@@ -1,8 +1,9 @@
-const activate = add =>
+//Dodaj możliwość kliknięcia w prostokąty prostokąty (gdy 'click' = true) lub zablokuj taką możliwość (gdy 'click' = false).
+const activate = click =>
 {
-    document.querySelectorAll('.game__char').forEach(char =>
+    figures.forEach(figure =>
     {
-        if(add) char.addEventListener('click', checkClick);
-        else char.removeEventListener('click', checkClick);
+        if(click) figure.addEventListener('click', checkClick);
+        else figure.removeEventListener('click', checkClick);
     });
 }

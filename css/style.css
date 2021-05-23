@@ -30,7 +30,7 @@ body {
   margin-top: 10vh;
 }
 
-.game__char {
+.game__figure {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   height: 50vh;
@@ -38,11 +38,11 @@ body {
   cursor: pointer;
 }
 
-.game__char--active {
+.game__figure--active {
   background-color: red;
 }
 
-.game__char:hover {
+.game__figure:hover {
   background-color: #85a4ff;
 }
 /*# sourceMappingURL=style.css.map */

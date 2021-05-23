@@ -6,3 +6,4 @@ let gameOn = false; //Po rozpoczęciu rozgrywki (kliknięte START GAME) zmienia 
 let clickCounter = 0; //Ilość poprawnych kliknięć z rzędu na postacie w pojedynczej sekwencji.
 
 const gameInfo = document.querySelector('.gameInfo');
+const figures = document.querySelectorAll('.game__figure')

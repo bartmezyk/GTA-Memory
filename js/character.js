@@ -1,30 +1,33 @@
+//Usuń podświetlenie wszystkich postaci (czyli również tej, która jest aktualnie podświetlona).
 const clearCharacter = () =>
 {
-	document.querySelectorAll('.game__char').forEach(char =>
+	figures.forEach(figure =>
 	{
-		char.classList.remove('game__char--active'); //Usuwa podświetlenie prostokątów wszystkich postaci.
-	})
+		figure.classList.remove('game__figure--active');
+	});
 }
 
-const showCharacter = number =>
+//Podświetl postać i odtwórz jej dźwięk.
+const showCharacter = index =>
 {
 	let soundUrl;
 
-	if(number == undefined) //Jesli nie podesłano żadnego argumentu.
+	if(index == undefined) //Jesli nie podesłano żadnego argumentu.
 	{ 
-		document.querySelector('[data-key="' + sequenceNumber[sequenceNumber.length - 1] + '"]').classList.add('game__char--active'); //Podświetla prostokąt postaci, której numer jest ostatni w tablicy numerów.
+		document.querySelector('[data-key="' + sequenceNumber[sequenceNumber.length - 1] + '"]').classList.add('game__figure--active'); //Podświetl postać, której numer jest ostatni w globalnej tablicy numerów.
 
 		soundUrl = 'sound/dialogue/' + sequenceSound[sequenceSound.length - 1] + '.wav';
 	}
-	else //Potrzebne by pokazywać która postać powinna zostać kliknięta, gdy wybrano niepoprawną postać.
+	else //Gdy podesłano argument. Potrzebne by podświetlać postać, która powinna zostać kliknięta, gdy wybrano niepoprawną postać.
 	{
-		document.querySelector('[data-key="' + sequenceNumber[number] + '"]').classList.add('game__char--active');
-		soundUrl = 'sound/dialogue/' + sequenceSound[number] + '.wav';
+		document.querySelector('[data-key="' + sequenceNumber[index] + '"]').classList.add('game__figure--active'); //Podświetl postać, której numer znajduje się na 'index' miejscu w globalnej tablicy numerów.
+
+		soundUrl = 'sound/dialogue/' + sequenceSound[index] + '.wav';
 	}
 
 	const sound = new Audio(soundUrl);
-	sound.play(); //Odtwarza dźwięk, którego nazwa jest ostatnia w tablicy dźwięków.
+	sound.play(); //Odtwarza dźwięk, którego numer jest ostatni w tablicy dźwięków.
 	
-	setTimeout(clearCharacter, 1000);
+	setTimeout(clearCharacter, 1000); //Usuń podświetlenie za 1s.
 }
 

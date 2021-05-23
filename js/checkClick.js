@@ -9,13 +9,11 @@ const properChar = () =>
 
 const checkClick = e =>
 {
-	const number = e.target.dataset.key;
-
 	if(!gameOn) //Jeśli nie nastąpił start gry
 	{
 		console.log('OUT GAME');
 		const drawedSound = (Math.floor(Math.random() * 5)).toString();
-		const soundName = number + drawedSound;
+		const soundName = e.target.dataset.key + drawedSound;
 		const soundUrl = 'sound/dialogue/' + soundName + '.wav';
 		const sound = new Audio(soundUrl);
 		sound.play();
@@ -24,7 +22,7 @@ const checkClick = e =>
 	{
 		clickCounter++;
 		
-		if(number != sequenceNumber[clickCounter - 1])
+		if(e.target.dataset.key != sequenceNumber[clickCounter - 1])
 		{
 			gameInfo.textContent = 'game over';
 			
