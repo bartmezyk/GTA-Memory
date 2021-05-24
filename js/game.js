@@ -1,4 +1,4 @@
-//Wyświetl tekst o rozgrywce podesłany jako argument.
+//Wyświetl tekst o rozgrywce w divie .gameMenu.
 const gameText = text => gameMenu.textContent = text;
 
 //Przygotuj tło do rozgrywki
@@ -11,6 +11,7 @@ const gamePrepare = () =>
 	gameText('start game');
 	gameMenu.addEventListener('click', gameStart);
 	gameMenu.classList.add('gameMenu--active');
+	gameMenu.addEventListener('mouseenter', sound);
 
 	activate(true);
 }
@@ -19,14 +20,15 @@ const gamePrepare = () =>
 //Rozpocznij rozgrywkę.
 const gameStart = () =>
 {
-	startGameBtn.disabled = true; //Dezaktywuj przycisk rozpoczynający rozgrywkę.
-
 	gameOn = true;
 
 	gameText("Remember new character"); //Wyświetl tekst o rozgrywce.
 	gameMenu.removeEventListener('click', gameStart);
 	gameMenu.classList.remove('gameMenu--active');
 	gameMenu.classList.add('gameMenu--deactive');
+	gameMenu.removeEventListener('mouseenter', sound);
+	sound('click');
+	
 
     newFigure();
 }
@@ -44,9 +46,9 @@ const gameOver = () =>
 	gameMenu.addEventListener('click', gameStart);
 	gameMenu.classList.add('gameMenu--active');
 	gameMenu.classList.remove('gameMenu--deactive');
+	gameMenu.addEventListener('mouseenter', sound);
 	
 	activate(); //Dodaj możliwość kliknięcia w postacie.
-	startGameBtn.disabled = false; //Odblokowanie przycisku rozpoczynającego ponowną rozgrywkę.
 }
 
 game.addEventListener('click', gamePrepare)

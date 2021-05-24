@@ -5,9 +5,7 @@ let gameOn = false; //Po rozpoczęciu rozgrywki (kliknięcie START GAME) zmienia
 
 let clickCounter = 0; //Ilość poprawnych kliknięć z rzędu na postacie w pojedynczej sekwencji.
 
-const figures = document.querySelectorAll('.game__figure');
-const gameInfo = document.querySelector('.gameInfo');
-const startGameBtn = document.querySelector('.startGame');
-const game = document.querySelector('.game');
-const activeFigure = document.querySelector('.game__activeFigure');
-const gameMenu = document.querySelector('.gameMenu');
+const figures = document.querySelectorAll('.game__figure'); //Niewidzialne prostokąty na postaciach do klikania i najeżdżania.
+const game = document.querySelector('.game'); //Tło gry.
+const activeFigure = document.querySelector('.game__activeFigure'); //Podświetlanie postaci.
+const gameMenu = document.querySelector('.gameMenu'); //Menu do wyświetlania informacji o rozgrywce.
