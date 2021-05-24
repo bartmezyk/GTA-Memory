@@ -31,7 +31,7 @@ const checkClick = e =>
 			{
 				gameText('great!');
 				
-				newFigure(); //Losuj nową postać.
+				newFigure(); //Dodaj nową postać do sekwencji.
 				
 				clickCounter = 0; //Wyzeruj ilość poprawnych kliknięć z rzędu na postacie w pojedynczej sekwencji (bo udało się powtórzyć całą sekwencję).
 			}
