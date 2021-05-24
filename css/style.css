@@ -107,6 +107,7 @@ body {
   height: 600px;
   z-index: 100;
   position: relative;
+  background-repeat: no-repeat;
 }
 
 .game__activeFigure--0 {
