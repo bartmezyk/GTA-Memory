@@ -46,20 +46,17 @@ body {
 }
 
 .topBar {
-  width: 100%;
   background-color: #606060;
-  min-height: 177px;
+  min-height: 180px;
 }
 
 .topBar__logo {
   font-family: 'Pricedown', sans-serif;
   -webkit-text-stroke: 1px black;
-  width: 100%;
-  float: left;
   font-size: 55px;
-  margin: 10px 0;
   line-height: 70%;
   text-shadow: -1px -1px 2px #000,   1px -1px 2px #000, -1px  1px 2px #000, 1px  1px 2px #000;
+  padding: 10px 0;
 }
 
 .topBar__logoMemory {
@@ -69,11 +66,9 @@ body {
 }
 
 .gameMenu {
-  width: 100%;
-  clear: both;
   height: 50px;
-  background-color: #505050;
   line-height: 50px;
+  background-color: #505050;
   text-transform: uppercase;
   cursor: default;
 }
@@ -92,16 +87,14 @@ body {
 
 .footer {
   background-color: #404040;
-  font-size: 15px;
   font-family: 'Lato', sans-serif;
+  font-size: 15px;
   padding: 5px;
 }
 
 .game {
   width: 1024px;
-  height: 600px;
-  margin: 0 auto;
-  background-repeat: no-repeat;
+  min-height: 600px;
 }
 
 .game--openingBackground {
@@ -114,11 +107,9 @@ body {
 }
 
 .game__activeFigure {
-  width: 1340px;
-  height: 600px;
-  z-index: 100;
-  position: relative;
+  min-height: 600px;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .game__activeFigure--0 {
