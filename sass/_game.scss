@@ -23,6 +23,26 @@
         height: 600px;
         z-index: 100;
         position: relative;
+
+        &--0 //smoke
+        {
+            background-image: url("../img/c0.png");
+        }
+
+        &--1 //cj
+        {
+            background-image: url("../img/c1.png");
+        }
+
+        &--2 //sweet
+        {
+            background-image: url("../img/c2.png");
+        }
+
+        &--3 //ryder
+        {
+            background-image: url("../img/c3.png");
+        }
     }
 
     &__figure

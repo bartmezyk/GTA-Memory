@@ -9,3 +9,4 @@ const figures = document.querySelectorAll('.game__figure');
 const gameInfo = document.querySelector('.gameInfo');
 const startGameBtn = document.querySelector('.startGame');
 const game = document.querySelector('.game');
+const activeFigure = document.querySelector('.game__activeFigure');

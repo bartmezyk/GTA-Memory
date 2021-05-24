@@ -4,9 +4,12 @@ const gameText = text => gameInfo.textContent = text;
 //Przygotuj tło do rozgrywki
 const gamePrepare = () =>
 {
-	game.removeEventListener('click', gamePrepare)
 	game.classList.remove('game--openingBackground');
 	game.classList.add('game--mainGameBackground');
+
+	startGameBtn.addEventListener('click', gameStart);
+	game.removeEventListener('click', gamePrepare)
+	activate(true);
 }
 
 //Rozpocznij rozgrywkę.
@@ -36,6 +39,4 @@ const gameOver = () =>
 	startGameBtn.disabled = false; //Odblokowanie przycisku rozpoczynającego ponowną rozgrywkę.
 }
 
-startGameBtn.addEventListener('click', gameStart);
 game.addEventListener('click', gamePrepare)
-activate(true);

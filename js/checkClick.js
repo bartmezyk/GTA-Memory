@@ -1,6 +1,8 @@
 //Sprawdź, co ma się zdarzyć, gdy gracz kliknął na postać ('e.target' - div z prostokątem klikniętej postaci, 'e.target.dataset.key' - numer prostokąta (numer klikniętej postaci)).
 const checkClick = e =>
 {
+	const figureNo = e.target.dataset.key;
+
 	if(!gameOn) //Jeśli nie nastąpił start rozgrywki.
 	{
 		const soundNo = e.target.dataset.key + (Math.floor(Math.random() * 5)).toString();
@@ -10,7 +12,7 @@ const checkClick = e =>
 	{
 		clickCounter++; //Zwiększ ilość poprawnych kliknięć z rzędu na postacie w pojedynczej sekwencji.
 		
-		if(e.target.dataset.key != sequenceNumber[clickCounter - 1]) //Jeśli nr klikniętej postaci jest różny z nr postaci na aktualnej pozycji w sekwencji (czyli gdy gracz wybierze nieprawidłową postać).
+		if(figureNo != sequenceNumber[clickCounter - 1]) //Jeśli nr klikniętej postaci jest różny z nr postaci na aktualnej pozycji w sekwencji (czyli gdy gracz wybierze nieprawidłową postać).
 		{
 			gameInfo.textContent = 'game over';
 			

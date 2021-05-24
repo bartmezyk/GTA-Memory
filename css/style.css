@@ -109,6 +109,22 @@ body {
   position: relative;
 }
 
+.game__activeFigure--0 {
+  background-image: url("../img/c0.png");
+}
+
+.game__activeFigure--1 {
+  background-image: url("../img/c1.png");
+}
+
+.game__activeFigure--2 {
+  background-image: url("../img/c2.png");
+}
+
+.game__activeFigure--3 {
+  background-image: url("../img/c3.png");
+}
+
 .game__figure {
   position: relative;
   float: left;
