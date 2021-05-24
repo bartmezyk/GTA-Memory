@@ -8,3 +8,4 @@ let clickCounter = 0; //Ilość poprawnych kliknięć z rzędu na postacie w poj
 const figures = document.querySelectorAll('.game__figure');
 const gameInfo = document.querySelector('.gameInfo');
 const startGameBtn = document.querySelector('.startGame');
+const game = document.querySelector('.game');

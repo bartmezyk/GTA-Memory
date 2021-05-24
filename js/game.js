@@ -1,6 +1,14 @@
 //Wyświetl tekst o rozgrywce podesłany jako argument.
 const gameText = text => gameInfo.textContent = text;
 
+//Przygotuj tło do rozgrywki
+const gamePrepare = () =>
+{
+	game.removeEventListener('click', gamePrepare)
+	game.classList.remove('game--openingBackground');
+	game.classList.add('game--mainGameBackground');
+}
+
 //Rozpocznij rozgrywkę.
 const gameStart = () =>
 {
@@ -29,4 +37,5 @@ const gameOver = () =>
 }
 
 startGameBtn.addEventListener('click', gameStart);
+game.addEventListener('click', gamePrepare)
 activate(true);
