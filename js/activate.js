@@ -13,6 +13,8 @@ const activate = (on = true) =>
 
             //Zdejmij podświetlenie postaci po opuszczeniu kursora.
             figure.addEventListener('mouseleave', fadeAwayFigure);
+
+            figure.classList.remove('game__figure--defaultPointer');
         }
         else 
         {
@@ -21,6 +23,8 @@ const activate = (on = true) =>
             figure.removeEventListener('mouseenter', lightUpFigure);
             figure.removeEventListener('mouseleave', fadeAwayFigure);
             clearFigures();
+
+            figure.classList.add('game__figure--defaultPointer');
         }
     });
 }

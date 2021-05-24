@@ -91,11 +91,11 @@ body {
   width: 1024px;
   height: 600px;
   margin: 0 auto;
-  cursor: pointer;
 }
 
 .game--openingBackground {
   background-image: url("../img/openingBackground.jpg");
+  cursor: pointer;
 }
 
 .game--mainGameBackground {
@@ -129,7 +129,7 @@ body {
 .game__figure {
   position: relative;
   float: left;
-  opacity: 0.5;
+  cursor: pointer;
 }
 
 .game__figure:nth-child(1) {
@@ -137,7 +137,6 @@ body {
   height: 320px;
   left: 167px;
   top: 150px;
-  background-color: yellow;
 }
 
 .game__figure:nth-child(2) {
@@ -145,7 +144,6 @@ body {
   height: 240px;
   left: 250px;
   top: 98px;
-  background-color: blue;
 }
 
 .game__figure:nth-child(3) {
@@ -153,7 +151,6 @@ body {
   height: 265px;
   left: 350px;
   top: 173px;
-  background-color: red;
 }
 
 .game__figure:nth-child(4) {
@@ -161,6 +158,9 @@ body {
   height: 280px;
   left: 530px;
   top: 170px;
-  background-color: green;
+}
+
+.game__figure--defaultPointer {
+  cursor: default;
 }
 /*# sourceMappingURL=style.css.map */
