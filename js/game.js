@@ -12,7 +12,7 @@ const gamePrepare = () =>
 	activate(true);
 
 	//Dodaj podświetlanie postaci po najechaniu kursorem i zdejmij podświetlenie po opuszczeniu kursora.
-	figures.forEach((figure, index)=>
+	/*figures.forEach((figure, index)=>
 	{
 		figure.addEventListener("mouseenter", ()=>
 		{
@@ -23,6 +23,7 @@ const gamePrepare = () =>
 			activeFigure.classList.remove('game__activeFigure--' + index);
 		});
 	});
+	*/
 }
 
 //Rozpocznij rozgrywkę.
