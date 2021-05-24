@@ -13,7 +13,7 @@ const gamePrepare = () =>
 	gameMenu.classList.add('gameMenu--active');
 	gameMenu.addEventListener('mouseenter', sound);
 
-	activate(true);
+	activateFigures(true);
 }
 
 
@@ -48,7 +48,7 @@ const gameOver = () =>
 	gameMenu.classList.remove('gameMenu--deactive');
 	gameMenu.addEventListener('mouseenter', sound);
 	
-	activate(); //Dodaj możliwość kliknięcia w postacie.
+	activateFigures(); //Dodaj możliwość kliknięcia w postacie.
 }
 
 game.addEventListener('click', gamePrepare)

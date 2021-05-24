@@ -1,12 +1,12 @@
-//Dodaj podświetlanie postaci po najechaniu kursorem. Gdy podesłano argument - e przyjmuje jego wartość i następuje podświetlenie postaci o podesłanym numerze. Gdy nie podesłano argumentu - e jest elementem na który najechano kursorem lub z którego zjechano kursorem (patrz funkcja activate() w activate.js).
+//Dodaj podświetlanie postaci po najechaniu kursorem. Gdy podesłano argument - e przyjmuje jego wartość i następuje podświetlenie postaci o podesłanym numerze. Gdy nie podesłano argumentu - e.target jest divem, na który najechano kursorem lub z którego zjechano kursorem (patrz funkcja activateFigures() w activateFigures.js).
 const lightUpFigure = e =>
 {
 	let figureNo;
 
-	if(typeof(e) != "number") figureNo =  e.target.dataset.key;
+	if(typeof(e) === "object") figureNo =  e.target.dataset.key; //Nr diva z prostokątem postaci, na który najechano kursorem.
 	else figureNo = e;
 
-	activeFigure.classList.add('game__activeFigure--' + figureNo);
+	activeFigure.classList.add('game__activeFigure--' + figureNo); //Dodanie klasy, która podświetli postać.
 }
 
 //Zdejmij podświetlenie postaci po opuszczeniu kursora.
@@ -14,14 +14,14 @@ const fadeAwayFigure = e =>
 {
 	let figureNo;
 	
-	if(typeof(e) != "number") figureNo =  e.target.dataset.key;
+	if(typeof(e) === "object") figureNo =  e.target.dataset.key; //Nr diva z prostokątem postaci, z którego zjechano kursorem.
 	else figureNo = e;
 
-    activeFigure.classList.remove('game__activeFigure--' + figureNo);
+    activeFigure.classList.remove('game__activeFigure--' + figureNo); //Zabranie klasy, która podświetlała postać.
 }
 
-//Usuń podświetlenie wszystkich postaci (czyli również tej, która jest aktualnie podświetlona).
-const clearFigures = () =>
+//Usuń podświetlenie postaci (tutaj: wszystkich).
+const clearFigure = () =>
 {
 	for(i = 0; i < 4; i ++)
 	{
@@ -49,7 +49,7 @@ const showFigure = index =>
 		sound(soundNo, true); //Odtwórz dźwięk, której numer znajduje się na 'index' miejscu w globalnej tablicy dźwięków.
 	}
 	
-	setTimeout(clearFigures, 1000);
+	setTimeout(clearFigure, 1000); //Usuń podświetlenie postaci.
 }
 
 //Pokaż, która postać powinna zostać kliknięta.
@@ -62,15 +62,15 @@ const showProperFigure = () =>
 	setTimeout(gameOver, 2500);
 }
 
-//Losuj nową postać do sekwencji i wyświetl stosowne informacje o rozgrywce.
+//Dodaj nową postać do sekwencji i wyświetl stosowne informacje o rozgrywce.
 const newFigure = () =>
 {
-	activate(false);
+	activateFigures(false); //Dodaj możliwości kliknięcia i najechania kursorem na postacie.
 	
-	drawing();
+	drawing(); //Losuj postać.
 	
 	setTimeout('gameText("Remember new character")', 1000);
 	setTimeout(showFigure, 1000);
 	setTimeout('gameText("Repeat the sequence")', 2000);
-	setTimeout(activate, 2000);
+	setTimeout(activateFigures, 2000);
 }

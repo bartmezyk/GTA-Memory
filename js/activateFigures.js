@@ -1,5 +1,5 @@
 //Dodaj możliwości kliknięcia i najechania kursorem na postacie (gdy 'on' = true) lub zablokuj takie możliwości (gdy 'on' = false).
-const activate = (on = true) =>
+const activateFigures = (on = true) =>
 {
     figures.forEach(figure =>
     {
@@ -14,7 +14,7 @@ const activate = (on = true) =>
             //Zdejmij podświetlenie postaci po opuszczeniu kursora.
             figure.addEventListener('mouseleave', fadeAwayFigure);
 
-            //Usuń klasę dodającą domyślny kursor myszy dla postaci.
+            //Ustaw kursor na pointer.
             figure.classList.remove('game__figure--defaultPointer');
         }
         else 
@@ -23,9 +23,12 @@ const activate = (on = true) =>
             figure.removeEventListener('click', checkClick);
             figure.removeEventListener('mouseenter', lightUpFigure);
             figure.removeEventListener('mouseleave', fadeAwayFigure);
-            clearFigures();
 
+            //Ustaw kursor na default.
             figure.classList.add('game__figure--defaultPointer');
+
+            //Usuń podświetlenie postaci.
+            clearFigure();
         }
     });
 }
