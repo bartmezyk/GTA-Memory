@@ -27,8 +27,11 @@ const activateFigures = (on = true) =>
             //Ustaw kursor na default.
             figure.classList.add('game__figure--defaultPointer');
 
-            //Usuń podświetlenie postaci.
-            clearFigure();
+            //Usuń podświetlenie wszystkich postaci.
+            for(i = 0; i < 4; i++)
+            {
+                fadeAwayFigure(i);
+            }
         }
     });
 }

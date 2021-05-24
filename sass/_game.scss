@@ -1,20 +1,19 @@
 .game
 {
-	background-image: url("../img/openingBackground.jpg");
-	background-repeat: no-repeat;
 	width: 1024px;
 	height: 600px;
 	margin: 0 auto;
+    background-repeat: no-repeat;
 
     &--openingBackground
     {
-        background-image: url("../img/openingBackground.jpg");
+        background-image: url("../img/openingBg.jpg");
         cursor: pointer;
     }
 
     &--mainGameBackground
     {
-        background-image: url("../img/mainGameBackground.png");
+        background-image: url("../img/mainGameBg.png");
     }
 
     &__activeFigure

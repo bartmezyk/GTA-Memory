@@ -1,4 +1,4 @@
-//Dodaj podświetlanie postaci po najechaniu kursorem. Gdy podesłano argument - e przyjmuje jego wartość i następuje podświetlenie postaci o podesłanym numerze. Gdy nie podesłano argumentu - e.target jest divem, na który najechano kursorem lub z którego zjechano kursorem (patrz funkcja activateFigures() w activateFigures.js).
+//Podświetl postać. Gdy podesłano argument - e przyjmuje jego wartość i następuje podświetlenie postaci o podesłanym numerze. Gdy nie podesłano argumentu - e.target jest divem, na który najechano kursorem lub z którego zjechano kursorem (patrz funkcja activateFigures() w activateFigures.js) i nastąpi podświetlenie postaci, której ten div dotyczy.
 const lightUpFigure = e =>
 {
 	let figureNo;
@@ -9,7 +9,7 @@ const lightUpFigure = e =>
 	activeFigure.classList.add('game__activeFigure--' + figureNo); //Dodanie klasy, która podświetli postać.
 }
 
-//Zdejmij podświetlenie postaci po opuszczeniu kursora.
+//Usuń podświetlenie postaci.
 const fadeAwayFigure = e =>
 {
 	let figureNo;
@@ -20,16 +20,7 @@ const fadeAwayFigure = e =>
     activeFigure.classList.remove('game__activeFigure--' + figureNo); //Zabranie klasy, która podświetlała postać.
 }
 
-//Usuń podświetlenie postaci (tutaj: wszystkich).
-const clearFigure = () =>
-{
-	for(i = 0; i < 4; i ++)
-	{
-		fadeAwayFigure(i);
-	}
-}
-
-//Podświetl postać i odtwórz jej dźwięk.
+//Wywołaj funkcję podświetlającą postać i odtwórz dźwięk tej postaci.
 const showFigure = index =>
 {
 	if(index == undefined) //Jeśli nie podesłano żadnego argumentu.
@@ -39,6 +30,8 @@ const showFigure = index =>
 
 		const soundNo = sequenceSound[sequenceSound.length - 1];
 		sound(soundNo, true); //Odtwórz dźwięk, którego numer jest ostatni w tablicy dźwięków.
+
+		setTimeout('fadeAwayFigure(' + sequenceNumber[sequenceNumber.length - 1] + ')', 1000); //Usuń podświetlenie postaci.
 	}
 	else //Gdy podesłano argument. Potrzebne by podświetlać postać, która powinna zostać kliknięta, gdy wybrano niepoprawną postać.
 	{
@@ -47,9 +40,9 @@ const showFigure = index =>
 
 		const soundNo = sequenceSound[index];
 		sound(soundNo, true); //Odtwórz dźwięk, której numer znajduje się na 'index' miejscu w globalnej tablicy dźwięków.
+
+		setTimeout('fadeAwayFigure(' + sequenceNumber[index] + ')', 1000); //Usuń podświetlenie postaci.
 	}
-	
-	setTimeout(clearFigure, 1000); //Usuń podświetlenie postaci.
 }
 
 //Pokaż, która postać powinna zostać kliknięta.
@@ -65,12 +58,12 @@ const showProperFigure = () =>
 //Dodaj nową postać do sekwencji i wyświetl stosowne informacje o rozgrywce.
 const newFigure = () =>
 {
-	activateFigures(false); //Dodaj możliwości kliknięcia i najechania kursorem na postacie.
+	activateFigures(false); //Zablokuj postacie.
 	
 	drawing(); //Losuj postać.
 	
-	setTimeout('gameText("Remember new character")', 1000);
+	setTimeout('gameText("remember new character:")', 1000);
 	setTimeout(showFigure, 1000);
-	setTimeout('gameText("Repeat the sequence")', 2000);
-	setTimeout(activateFigures, 2000);
+	setTimeout('gameText("repeat the sequence")', 2000);
+	setTimeout(activateFigures, 2000); //Odblokuj postacie.
 }

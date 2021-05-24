@@ -32,15 +32,15 @@
 }
 
 body {
-  background-color: #303030;
-  color: #FFFFFF;
+  background-image: url("../img/siteBg.png");
+  /* This pattern is downloaded from www.subtlepatterns.com. If you need more, that's where to get'em. */
+  color: #fff;
   font-family: 'BankGothic', Lato, sans-serif;
   font-size: 25px;
-  margin: 0;
 }
 
 .container {
-  width: 1340px;
+  width: 1024px;
   margin: 0 auto;
   text-align: center;
 }
@@ -83,15 +83,14 @@ body {
 }
 
 .gameMenu--active:hover {
-  color: rgba(211, 211, 211, 0.849);
+  color: rgba(211, 211, 211, 0.938);
 }
 
 .gameMenu--deactive {
-  color: gray;
+  color: #a1a1a1;
 }
 
 .footer {
-  width: 1330px;
   background-color: #404040;
   font-size: 15px;
   font-family: 'Lato', sans-serif;
@@ -99,20 +98,19 @@ body {
 }
 
 .game {
-  background-image: url("../img/openingBackground.jpg");
-  background-repeat: no-repeat;
   width: 1024px;
   height: 600px;
   margin: 0 auto;
+  background-repeat: no-repeat;
 }
 
 .game--openingBackground {
-  background-image: url("../img/openingBackground.jpg");
+  background-image: url("../img/openingBg.jpg");
   cursor: pointer;
 }
 
 .game--mainGameBackground {
-  background-image: url("../img/mainGameBackground.png");
+  background-image: url("../img/mainGameBg.png");
 }
 
 .game__activeFigure {

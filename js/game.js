@@ -4,33 +4,34 @@ const gameText = text => gameMenu.textContent = text;
 //Przygotuj tło do rozgrywki
 const gamePrepare = () =>
 {
+	game.removeEventListener('click', gamePrepare);
 	game.classList.remove('game--openingBackground');
-	game.classList.add('game--mainGameBackground');
-	game.removeEventListener('click', gamePrepare)
+	game.classList.add('game--mainGameBackground'); //Zmień tło na tło z postaciami przy stole.
 
-	gameText('start game');
 	gameMenu.addEventListener('click', gameStart);
-	gameMenu.classList.add('gameMenu--active');
+	gameMenu.classList.add('gameMenu--active'); //Div gameMenu staje się aktywny.
 	gameMenu.addEventListener('mouseenter', sound);
 
-	activateFigures(true);
-}
+	gameText('start game');
 
+	activateFigures(); //Odblokuj postacie.
+}
 
 //Rozpocznij rozgrywkę.
 const gameStart = () =>
 {
 	gameOn = true;
 
-	gameText("Remember new character"); //Wyświetl tekst o rozgrywce.
 	gameMenu.removeEventListener('click', gameStart);
 	gameMenu.classList.remove('gameMenu--active');
-	gameMenu.classList.add('gameMenu--deactive');
+	gameMenu.classList.add('gameMenu--deactive'); //Div gameMenu staje się nieaktywny.
 	gameMenu.removeEventListener('mouseenter', sound);
-	sound('click');
-	
 
-    newFigure();
+	sound('click');
+
+	gameText("remember new character:");
+
+    newFigure(); //Dodaj nową postać do sekwencji.
 }
 
 //Wykonaj czynności po przegranej rozgrywce.
@@ -44,11 +45,11 @@ const gameOver = () =>
 	
 	gameText('again?');
 	gameMenu.addEventListener('click', gameStart);
-	gameMenu.classList.add('gameMenu--active');
 	gameMenu.classList.remove('gameMenu--deactive');
+	gameMenu.classList.add('gameMenu--active'); //Div gameMenu staje się aktywny.
 	gameMenu.addEventListener('mouseenter', sound);
 	
-	activateFigures(); //Dodaj możliwość kliknięcia w postacie.
+	activateFigures(); //Odblokuj postacie.
 }
 
-game.addEventListener('click', gamePrepare)
+game.addEventListener('click', gamePrepare);
