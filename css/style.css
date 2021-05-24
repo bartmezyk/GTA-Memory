@@ -75,6 +75,19 @@ body {
   background-color: #505050;
   line-height: 50px;
   text-transform: uppercase;
+  cursor: default;
+}
+
+.gameMenu--active {
+  cursor: pointer;
+}
+
+.gameMenu--active:hover {
+  color: rgba(211, 211, 211, 0.849);
+}
+
+.gameMenu--deactive {
+  color: gray;
 }
 
 .footer {
@@ -130,6 +143,7 @@ body {
   position: relative;
   float: left;
   cursor: pointer;
+  /*opacity: 0.5; //dla testów */
 }
 
 .game__figure:nth-child(1) {
@@ -137,6 +151,7 @@ body {
   height: 320px;
   left: 167px;
   top: 150px;
+  /*background-color: yellow; //dla testów */
 }
 
 .game__figure:nth-child(2) {
@@ -144,6 +159,7 @@ body {
   height: 240px;
   left: 250px;
   top: 98px;
+  /*background-color: blue; //dla testów */
 }
 
 .game__figure:nth-child(3) {
@@ -151,6 +167,7 @@ body {
   height: 265px;
   left: 350px;
   top: 173px;
+  /*background-color: red; //dla testów */
 }
 
 .game__figure:nth-child(4) {
@@ -158,6 +175,7 @@ body {
   height: 280px;
   left: 530px;
   top: 170px;
+  /*background-color: green; //dla testów */
 }
 
 .game__figure--defaultPointer {

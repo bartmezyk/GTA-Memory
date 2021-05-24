@@ -14,7 +14,7 @@ const checkClick = e =>
 		
 		if(figureNo != sequenceNumber[clickCounter - 1]) //Jeśli nr klikniętej postaci jest różny z nr postaci na aktualnej pozycji w sekwencji (czyli gdy gracz wybierze nieprawidłową postać).
 		{
-			gameInfo.textContent = 'game over';
+			gameText('game over');
 			
 			sound('end'); //Odtwórz dźwięk oznaczający przegraną.
 			

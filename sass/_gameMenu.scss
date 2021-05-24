@@ -6,4 +6,20 @@
 	background-color: #505050;
 	line-height: 50px;
 	text-transform: uppercase;
+	cursor: default;
+
+	&--active
+	{
+		cursor: pointer;
+
+		&:hover
+		{
+			color: rgba(211, 211, 211, 0.849);
+		}
+	}
+
+	&--deactive
+	{
+		color: gray;
+	}
 }

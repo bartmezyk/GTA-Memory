@@ -1,30 +1,20 @@
 //Wyświetl tekst o rozgrywce podesłany jako argument.
-const gameText = text => gameInfo.textContent = text;
+const gameText = text => gameMenu.textContent = text;
 
 //Przygotuj tło do rozgrywki
 const gamePrepare = () =>
 {
 	game.classList.remove('game--openingBackground');
 	game.classList.add('game--mainGameBackground');
-
-	startGameBtn.addEventListener('click', gameStart);
 	game.removeEventListener('click', gamePrepare)
-	activate(true);
 
-	//Dodaj podświetlanie postaci po najechaniu kursorem i zdejmij podświetlenie po opuszczeniu kursora.
-	/*figures.forEach((figure, index)=>
-	{
-		figure.addEventListener("mouseenter", ()=>
-		{
-			activeFigure.classList.add('game__activeFigure--' + index);
-		});
-		figure.addEventListener("mouseleave", ()=>
-		{
-			activeFigure.classList.remove('game__activeFigure--' + index);
-		});
-	});
-	*/
+	gameText('start game');
+	gameMenu.addEventListener('click', gameStart);
+	gameMenu.classList.add('gameMenu--active');
+
+	activate(true);
 }
+
 
 //Rozpocznij rozgrywkę.
 const gameStart = () =>
@@ -34,6 +24,9 @@ const gameStart = () =>
 	gameOn = true;
 
 	gameText("Remember new character"); //Wyświetl tekst o rozgrywce.
+	gameMenu.removeEventListener('click', gameStart);
+	gameMenu.classList.remove('gameMenu--active');
+	gameMenu.classList.add('gameMenu--deactive');
 
     newFigure();
 }
@@ -48,6 +41,9 @@ const gameOver = () =>
 	sequenceSound.length = 0;
 	
 	gameText('again?');
+	gameMenu.addEventListener('click', gameStart);
+	gameMenu.classList.add('gameMenu--active');
+	gameMenu.classList.remove('gameMenu--deactive');
 	
 	activate(); //Dodaj możliwość kliknięcia w postacie.
 	startGameBtn.disabled = false; //Odblokowanie przycisku rozpoczynającego ponowną rozgrywkę.

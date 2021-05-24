@@ -10,3 +10,4 @@ const gameInfo = document.querySelector('.gameInfo');
 const startGameBtn = document.querySelector('.startGame');
 const game = document.querySelector('.game');
 const activeFigure = document.querySelector('.game__activeFigure');
+const gameMenu = document.querySelector('.gameMenu');

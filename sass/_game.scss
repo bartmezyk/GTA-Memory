@@ -51,39 +51,44 @@
         position: relative;
         float: left;
         cursor: pointer;
-        //opacity: 0.5;
+        /*opacity: 0.5; //dla testów */
+        
         &:nth-child(1)
         {
             width: 118px;
             height: 320px;
             left: 167px;
             top: 150px;
-            //background-color: yellow;
+            /*background-color: yellow; //dla testów */
         }
+
         &:nth-child(2)
         {
             width: 85px;
             height: 240px;
             left: 250px;
             top: 98px;
-            //background-color: blue;
+            /*background-color: blue; //dla testów */
         }
+
         &:nth-child(3)
         {
             width: 83px;
             height: 265px;
             left: 350px;
             top: 173px;
-            //background-color: red;
+            /*background-color: red; //dla testów */
         }
+
         &:nth-child(4)
         {
             width: 115px;
             height: 280px;
             left: 530px;
             top: 170px;
-            //background-color: green;
+            /*background-color: green; //dla testów */
         }
+
         &--defaultPointer
         {
             cursor: default;
